@@ -10,9 +10,23 @@ var {
   StyleSheet,
   Text,
   View,
+  TouchableNativeFeedback,
 } = React;
 
+var DialogAndroid = require('react-native-dialogs');
+
 var ReactNativeDialogsExample = React.createClass({
+  showDialog: function () {
+    var dialog = new DialogAndroid();
+    dialog.set({
+      title: 'Hello, World!',
+      content: 'I\'m just simple Dialog',
+      positiveText: 'OK',
+      negativeText: 'Cancel'
+    });
+    dialog.show();
+  },
+
   render: function() {
     return (
       <View style={styles.container}>
@@ -25,6 +39,9 @@ var ReactNativeDialogsExample = React.createClass({
         <Text style={styles.instructions}>
           Shake or press menu button for dev menu
         </Text>
+        <TouchableNativeFeedback onPress={this.showDialog}>
+          <View><Text>Click me!</Text></View>
+        </TouchableNativeFeedback>
       </View>
     );
   }
