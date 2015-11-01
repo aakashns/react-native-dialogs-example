@@ -1,4 +1,4 @@
 rootProject.name = 'ReactNativeDialogsExample'
 
-include ':app', ':react-native-dialogs’
-project(':react-native-dialogs').projectDir = new file('../node_modules/react-native-dialogs/android')
+include ':app', ':react-native-dialogs'
+project(':react-native-dialogs').projectDir = file('../node_modules/react-native-dialogs/android')
