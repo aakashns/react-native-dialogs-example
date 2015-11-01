@@ -12,6 +12,9 @@ var {
   View,
 } = React;
 
+var { DialogAndroid } = React.NativeModules;
+console.log(DialogAndroid);
+
 var ReactNativeDialogsExample = React.createClass({
   render: function() {
     return (
